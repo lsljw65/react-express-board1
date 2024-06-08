@@ -16,12 +16,24 @@ function App() {
     axios.get('/movies/'+3)
   }
 
+  const insertInput=(e)=>{
+    console.log(e.target.value)
+  }
+
   return (
     <div id="App">
       <h1>Hello React </h1>
       <h2>React-Express-MySql 연결</h2>
       <button onClick={selectAll}>모두조회</button>
       <button onClick={selectWhere}>조건조회</button>
+      {/* 입력 */}
+      <div className='insert'>
+        <label>입력하세요 : </label><input type="text" onChange={insertInput}/>
+        <br/>
+        <input type="submit" value={"결과전송"}/>
+
+      </div>
+      
 
     </div>
   );
