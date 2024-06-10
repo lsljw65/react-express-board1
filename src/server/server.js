@@ -14,7 +14,7 @@ app.get('/movies',(req,res)=>{
     console.log('/movies')
     db.query("select * from movi",(err,data)=>{
         if(!err){
-            console.log("data",data);
+            // console.log("data",data);
             res.send(data)
         } else {
             console.log("err",err)
